@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>대검찰청</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/sub_style3.css">
+  <link rel="shortcut icon" href="./images/favicon.vnd.microsoft.ico" type="image/x-icon">
+
+  <script src="./js/jquery-1.10.2.min.js"></script>
+  <script src="https://kit.fontawesome.com/1e065b9b94.js" crossorigin="anonymous"></script>
+  <script src="./js/jquery.easing.1.3.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/weather.js"></script>
+  <script src="./js/sub_script2.js"></script>
+
+
+
+</head>
+
+<body>
+  <header>
+    <div id="header_wrap">
+      <div class="gnb">
+        <div class="gnb_wrap">
+          <ul>
+            <li class="cicon"></li>
+            <li class="ctemp">현재온도 : </li>
+            <li class="stick">
+              |
+            </li>
+            <li>
+              <a href="#none">
+                <img src="./images/koreanlogo.png" alt="koreanlogo" title="국가상징안내 새창열림">
+                국가상징안내
+              </a>
+            </li>
+            <li class="stick">
+              |
+            </li>
+            <li>
+              <a href="#none" title="역사관체험관 새창열림">역사관체험관</a>
+            </li>
+            <li class="stick">
+              |
+            </li>
+            <li><a href="#none">글자크기 조정</a></li>
+            <li class="zoom"><a href="#none" class="zoom_in"><img src="./images/+.png" alt="zoom_in"></a></li>
+            <li class="zoom" style="display: none;"><a href="#none"></a></li>
+            <li class="zoom"><a href="#none" class="zoom_out"><img src="./images/-.png" alt="zoom_out"></a></li>
+            <li class="stick">
+              |
+            </li>
+            <li>
+              <select name="text-align:center;" class="cell">
+                <option value="KOREAN" selected>&nbsp;&nbsp;KOREAN&nbsp;&nbsp;</option>
+                <option value="ENGLISH">&nbsp;&nbsp;ENGLISH&nbsp;&nbsp;</option>
+                <option value="CHINESE">&nbsp;&nbsp;CHINESE&nbsp;&nbsp;</option>
+                <option value="JAPANESE">&nbsp;&nbsp;JAPANESE&nbsp;&nbsp;</option>
+              </select>
+            </li>
+            <li class="stick">
+              |
+            </li>
+            <li>
+              <a href="login.html">로그인</a>
+            </li>
+            <li>
+              <a href="#none">회원가입</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 상단 네비 탭메뉴 시작 -->
+      <div id="header_wrap2">
+        <h1>
+          <a href="index.html">
+            <img src="./images/logo.png" alt="logo">
+            <span>대검찰청</span>
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li class="depth1_1">
+              <a href="sub1.html">참여민원</a>
+              <div class="dep2Box">
+                <div class="dep2List">
+                  <span>
+                    참여민원
+                  </span>
+                  <ul>
+                    <li class="dep2">
+                      <a href="">민원안내</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">민원사무 안내</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">민원서식 내려받기</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">사건처리절차 안내</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">민원서비스헌장</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">민원안내전화</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">적극행정제도 소개</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">적극행정 소식란</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#">일반민원</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#noen">이용안내</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#noen">민원신청/안내</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#noen">110정부민원안내콜센터</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#noen">공개민원 열람하기</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">제증명민원</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#">벌과금/사건검색</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">사건진행상황조회 &nbsp; <img src="./images/blt_newwin.png" alt=""></a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">벌과금납부조회 &nbsp; <img src="./images/blt_newwin.png" alt=""></a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">재판서 및 통지서 조회 &nbsp; <img src="./images/blt_newwin.png"
+                              alt=""></a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">가납금환금조회 &nbsp; <img src="./images/blt_newwin.png" alt=""></a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">자주묻는질문</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">자유발언대</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">감동직원추천</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">국민감동직원추천</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">추천서 작성하기</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">내의견 보기</a>
+                        </li>
+                      </ul>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li> <!-- 참여민원 끝 -->
+
+            <li class="depth1_2">
+              <a href="#none">검찰활동</a>
+              <div class="dep2Box">
+                <div class="dep2List">
+                  <span>
+                    검찰활동
+                  </span>
+                  <ul>
+                    <li class="dep2">
+                      <a href="#none">주요수사활동</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">회계분석ㆍ자금추적 수사지원</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">기술유출범죄수사</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">범죄수익환수조사</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">마약·조직폭력범죄수사</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">지식재산권침해범죄수사</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">과학수사</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">공판·형집행</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">공판활동</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">형의집행</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">지원활동</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">소년선도보호</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">피해자인권</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">사회공헌</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">국제협력</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp; <a href="#">검찰의 국제공조</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp; <a href="#">국제협력 네트워크</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li> <!-- 검찰활동 끝 -->
+
+            <li class="depth1_3">
+              <a href="#none">정보자료</a>
+              <div class="dep2Box">
+                <div class="dep2List">
+                  <span>
+                    정보자료
+                  </span>
+                  <ul>
+                    <li class="dep2">
+                      <a href="#none">통계자료</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">범죄분석</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">범죄동향리포트</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">형사사건동향</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">연구자료</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">검찰관련 연구자료</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">해외연수검사 연구논문 &nbsp;<img src="./images/blt_newwin.png" alt=""></a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">검찰연감</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dep2">
+                      <a href="#none">나라지표 상황판</a>
+                    </li>
+                    <li class="dep2">
+                      <a href="#none">훈련/예규</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+            </li> <!-- 정보자료 끝 -->
+
+            <li class="depth1_4">
+              <a href="sub3.html">알림소식</a>
+              <div class="dep2Box">
+                <div class="dep2List">
+                  <span>
+                    알림소식
+                  </span>
+                  <ul>
+                    <li class="dep2">
+                      <a href="#">공지사항</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#">고시·공고</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#">검찰발표자료</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#">검찰소식</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">카드뉴스</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">생생영상 &nbsp; <img src="./images/blt_newwin.png" alt=""></a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">뉴스레터</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li> <!-- 알림소식 끝 -->
+
+            <li class="depth1_5">
+              <a href="sub2.html">정보공개</a>
+              <div class="dep2Box">
+                <div class="dep2List">
+                  <span>
+                    정보공개
+                  </span>
+                  <ul>
+                    <li class="dep2">
+                      <a href="#none">정보공개안내</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">업무처리절차</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">공개청구권자</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">비공개 대상 정보 세부 기준</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">정보공개방법</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">불복구제절차</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">수수료안내</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">관련서식</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">사전정보공표</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">사전정보공표 대상</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">정보목록</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">정보목록 &nbsp; <img src="./images/blt_newwin.png" alt=""></a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">2014.3.이전 검찰청 정보목록</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">정보공개청구</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">공개데이터개방</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">정책실명제</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li> <!-- 정보공개 끝 -->
+
+            <li class="depth1_6">
+              <a href="#none">검찰소개</a>
+              <div class="dep2Box">
+                <div class="dep2List">
+                  <span>
+                    검찰소개
+                  </span>
+                  <ul>
+                    <li class="dep2">
+                      <a href="#none">검찰구성</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">검찰이란?</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">검찰구성원</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">검사의역할</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">조직 및 업무</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp; <a href="none">부서별연락처</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp; <a href="none">검찰조직구조</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp; <a href="none">층별안내도</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp; <a href="none">대검찰청 배치표</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">검찰총장소개</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">총장인사말</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">검찰총장과의 대화</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">총장동정</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">발표연설</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">역대총장</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">주요일정</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">검찰CI/CM</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">검찰역사관</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">검찰제도의 변천</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">복제의 변천</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">서식의 변천</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">사건과 이슈</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">대검찰청견학</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">견학안내</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">견학신청</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">견학소감</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">찾아오시는 길</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">전국경찰청찾기</a>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">국가형사사법기록관</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">기록관 소개</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">견학안내 및 신청</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="dep2">
+                      <a href="#none">1301검찰콜센터</a>
+                      <ul>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">콜센터 소개</a>
+                        </li>
+                        <li class="dep3">
+                          -&nbsp;&nbsp;<a href="#none">이용안내 </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li> <!-- 검찰소개 끝 -->
+          </ul>
+          <div class="header_btn">
+            <a href="#none"><img src="./images/btn_sch.png" alt="btn_sch"></a>
+            <a href="#none">
+              <img src="./images/btn_allmenu4.png" alt="btn_allmenu4">
+              <p class="menu">전체메뉴</p>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- 헤더 배너시작 -->
+    <div id="hd_banner_wrap">
+      <div class="hd_banner">
+        <h2>알림소식</h2>
+      </div>
+    </div>
+    <!-- 헤더 배너 아랫줄 -->
+    <div id="hdbanner_dw">
+      <div class="hdbanner_dw_wrap">
+        <a href="#none">
+          <i class="fa-solid fa-house fl"></i>
+          <p class="fl"> > 알림소식 </p>
+          <p class="fl"> > 공지사항 </p>
+        </a>
+        <a href="#" onClick=window.print()><i class="fa-solid fa-print fr"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 컨텐츠 시작 -->
+  <div class="container">
+    <!-- 왼쪽 메뉴 -->
+    <div class="aside">
+      <h2 class="title">알림소식</h2>
+      <ul class="dep2_wrap">
+        <li class="depth2">
+          <a href="#none">공지사항</a>
+        </li>
+
+        <li class="depth2">
+          <a href="#none">고시·공고</a>
+        </li>
+
+        <li class="depth2">
+          <a href="#none">검찰발표자료</a>
+        </li>
+
+        <li class="depth2">
+          <a href="#none">검찰소식</a>
+          <ul class="depth3">
+            <li><a href="#none">카드뉴스</a></li>
+            <li><a href="#none">생생영상</a></li>
+            <li><a href="#none">뉴스레터</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="aside_banner">
+        <div class="call">
+          <span>대표전화</span> <br>
+          <p>국번없이</p><em>1301</em>
+        </div>
+        <div class="info">
+          <span class="sch"><a href="#none">전국 검찰청 찾기</a></span>
+          <span class="visit"><a href="#none">견학신청 안내</a></span>
+        </div>
+      </div>
+    </div>
+    <!-- 오른쪽 아티클 부분 -->
+    <div class="article">
+      <h3>공지사항</h3>
+      <div class="searchBox">
+        <div class="select_Wrap">
+          <select name="search1" id="search1">
+            <option value="" selected="selected">주관부서</option>
+            <option value="">감찰1과</option>
+            <option value="">감찰2과</option>
+            <option value="">감찰3과</option>
+            <option value="">공안수사지원과</option>
+            <option value="">공판1과</option>
+            <option value="">공판2과</option>
+            <option value="">국제협력담당관</option>
+            <option value="">노동수사지원과</option>
+            <option value="">대변인</option>
+            <option value="">디엔에이화학분석과</option>
+            <option value="">디지털수사과</option>
+            <option value="">마약·조직범죄과</option>
+            <option value="">범죄수익환수과</option>
+            <option value="">법과학분석과</option>
+            <option value="">복지후생과</option>
+            <option value="">비상계획담당관</option>
+            <option value="">사이버수사과</option>
+            <option value="">선거수사지원과</option>
+            <option value="">수사지휘·지원과</option>
+            <option value="">양성평등정책담당관</option>
+            <option value="">운영지원과</option>
+            <option value="">인권감독담당관</option>
+            <option value="">인권기획담당관</option>
+            <option value="">인권정책관</option>
+            <option value="">정보관리담당관</option>
+            <option value="">정보통신과</option>
+            <option value="">정책기획과</option>
+            <option value="">집행과</option>
+            <option value="">형사1과</option>
+            <option value="">형사2과</option>
+            <option value="">형사정책담당관</option>
+            <option value="">형사3과</option>
+            <option value="">형사4과</option>
+          </select>
+        </div>
+        <div class="select_Wrap2">
+          <select name="search2" id="search2">
+            <option value="">제목</option>
+            <option value="">내용</option>
+          </select>
+        </div>
+        <div class="select_Wrap3">
+          <input type="text" style="width: 160px;">
+        </div>
+        <div class="select_Wrap4">
+          <a href="#none" class="search_button">검색</a>
+        </div>
+      </div>
+      <div class="brdTop">
+        <span>검색결과 <em>311</em> 건</span>
+      </div>
+      <!-- 게시판 리스트 시작 -->
+      <div id="box1">
+        <div class="objectTitle cf">
+          <div class="th noT fl">번호</div>
+          <div class="th titleT fl">제목</div>
+          <div class="th fileT fl">파일</div>
+          <div class="th name fl">주관부서</div>
+          <div class="th dateT fl">작성일</div>
+          <div class="th visitT fl">조회</div>
+        </div>
+        <div class="boardContent">
+          <input type="checkbox" id="click1" class="a_list1" checked>
+          <div class="td no fl">311</div>
+          <div class="td title1 fl">대검찰청 뉴스레터 4월호[2023. 4.]</div>
+          <div class="td file fl">&nbsp;&nbsp;</div>
+          <div class="td name fl">대변인</div>
+          <div class="td date fl">2023.04.23.</div>
+          <div class="td visit fl">100</div>
+          <div class="content_wrap1 cl">
+            <div class="content">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="boardContent">
+          <input type="checkbox" id="click2" class="a_list1" checked>
+          <div class="td no fl">310</div>
+          <div class="td title1 fl">'Monthly 청렴' 2023년 4월호 게시?</div>
+          <div class="td file fl">&nbsp;&nbsp;</div>
+          <div class="td name fl">감찰1과</div>
+          <div class="td date fl">2023.04.03.</div>
+          <div class="td visit fl">105</div>
+          <div class="content_wrap cl">
+            <div class="content">
+              <p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="boardContent">
+            <input type="checkbox" class="a_list1" checked>
+            <div class="td no fl">309</div>
+            <div class="td title1 fl">[과학수사부] 소식지 「법과 과학」 3월호 게시</div>
+            <div class="td file fl">&nbsp;&nbsp;</div>
+            <div class="td name fl">
+              법과학분석과</div>
+            <div class="td date fl">2023.04.01.</div>
+            <div class="td visit fl">137</div>
+            <div class="content_wrap cl">
+              <div class="content">
+                <p>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="boardContent">
+            <input type="checkbox" class="a_list1" checked>
+            <div class="td no fl">308</div>
+            <div class="td title1 fl">
+              대검찰청 뉴스레터 3월호[2023. 3.]</div>
+            <div class="td file fl">&nbsp;&nbsp;</div>
+            <div class="td name fl">대변인</div>
+            <div class="td date fl">2023.03.28.</div>
+            <div class="td visit fl">76</div>
+            <div class="content_wrap cl">
+              <div class="content">
+                <p>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="boardContent">
+            <input type="checkbox" class="a_list1" checked>
+            <div class="td no fl">307</div>
+            <div class="td title1 fl">
+              'Monthly 청렴' 2023년 3월호 게시</div>
+            <div class="td file fl">&nbsp;&nbsp;</div>
+            <div class="td name fl">감찰1과</div>
+            <div class="td date fl">2023.03.25.</div>
+            <div class="td visit fl">135</div>
+            <div class="content_wrap cl">
+              <div class="content">
+                <p>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="boardContent">
+            <input type="checkbox" class="a_list1" checked>
+            <div class="td no fl">306</div>
+            <div class="td title1 fl">
+              성폭력처벌법 일부 위헌결정에 따른 재심절차 안내</div>
+            <div class="td file fl">&nbsp;&nbsp;</div>
+            <div class="td name fl">형사4과</div>
+            <div class="td date fl">2023.03.21.</div>
+            <div class="td visit fl">305</div>
+            <div class="content_wrap cl">
+              <div class="content">
+                <p>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="boardContent">
+            <input type="checkbox" class="a_list1" checked>
+            <div class="td no fl">305</div>
+            <div class="td title1 fl">[과학수사부] 소식지 「법과 과학」 1월호 게시</div>
+            <div class="td file fl">&nbsp;&nbsp;</div>
+            <div class="td name fl">
+              법과학분석과
+            </div>
+            <div class="td date fl">2023.03.11.</div>
+            <div class="td visit fl">224</div>
+            <div class="content_wrap cl">
+              <div class="content">
+                <p>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="boardContent">
+            <input type="checkbox" class="a_list1" checked>
+            <div class="td no fl">304</div>
+            <div class="td title1 fl">'Monthly 청렴' 2023년 2월호 게시</div>
+            <div class="td file fl">&nbsp;&nbsp;</div>
+            <div class="td name fl">감찰1과</div>
+            <div class="td date fl">2023.03.08.</div>
+            <div class="td visit fl">164</div>
+            <div class="content_wrap cl">
+              <div class="content">
+                <p>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="boardContent">
+            <input type="checkbox" class="a_list1" checked>
+            <div class="td no fl">303</div>
+            <div class="td title1 fl">제22기 Pro_to_u 기자단 최종합격자 발표</div>
+            <div class="td file fl">&nbsp;&nbsp;</div>
+            <div class="td name fl">대변인</div>
+            <div class="td date fl">2023.02.27.</div>
+            <div class="td visit fl">435</div>
+            <div class="content_wrap cl">
+              <div class="content">
+                <p>
+                </p>
+              </div>
+            </div>
+        </div>
+        <div class="boardContent">
+            <input type="checkbox" class="a_list1" checked>
+            <div class="td no fl">302</div>
+            <div class="td title1 fl">
+              대검찰청 뉴스레터 1월호[2023. 1.]</div>
+            <div class="td file fl">&nbsp;&nbsp;</div>
+            <div class="td name fl">대변인</div>
+            <div class="td date fl">2023.02.23.</div>
+            <div class="td visit fl">218</div>
+            <div class="content_wrap cl">
+              <div class="content">
+                <p>
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="contbox_3">
+        <div class="contbox_number">
+          <a href="#none" class="cb_nb">1</a>
+          <a href="#none" class="cb_nb">2</a>
+          <a href="#none" class="cb_nb">3</a>
+          <a href="#none" class="cb_nb">4</a>
+          <a href="#none" class="cb_nb">5</a>
+          <a href="#none" class="cb_nb">6</a>
+          <a href="#none" class="cb_nb">7</a>
+          <a href="#none" class="cb_nb">8</a>
+          <a href="#none" class="cb_nb">9</a>
+          <a href="#none" class="cb_nb">10</a>
+          <a href="#none"><i class="fa-solid fa-angle-right" style="color: #666666;"></i></a>
+          <a href="#none"><i class="fa-solid fa-angles-right" style="color: #666666; "></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 풋터시작 -->
+  <div id="footer_banner">
+    <div class="footer_site">
+      <a href="#none" class="open">
+        전국검찰청 바로가기
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <div id="footer_Wrap">
+      <div class="footer">
+        <div class="inner">
+          <a href="#" class="logo">검찰 PROSECUTION SERVICE</a>
+          <address><span>우편번호 : 06590</span> <span>서울특별시 서초구 반포대로 157</span> <span class="call">대표전화 : 국번없이
+              1301(유료)</span></address>
+          <div class="copyright">COPYRIGHT ⓒ PROSECUTION SERVICE. <span>ALL RIGHTS RESERVED.</span></div>
+          <div class="ft_logo">
+            <a href="#none"><img src="./images/ico_wa.png" alt=""></a>
+          </div>
+          <ul class="menu">
+            <li><a href="#none">찾아오시는 길</a></li>
+            <li><a href="#none" class="em">개인정보처리방침</a></li>
+            <li><a href="#none">홈페이지개선의견</a></li>
+            <li><a href="#none">이용안내</a></li>
+            <li><a href="#none">뷰어다운로드</a></li>
+            <li><a href="#none">저작권정책</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
